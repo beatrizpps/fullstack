@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animais do Condomínio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastro de Animais do Condomínio</h1>
+        </header>
+
+        <section class="form-section">
+            <form id="animalForm">
+                <div class="form-group">
+                    <label for="name">Nome do Animal</label>
+                    <input type="text" id="name" placeholder="Nome do Animal" required />
+                </div>
+                <div class="form-group">
+                    <label for="breed">Raça</label>
+                    <input type="text" id="breed" placeholder="Raça" required />
+                </div>
+                <div class="form-group">
+                    <label for="type">Tipo</label>
+                    <select id="type" required>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="furColor">Cor da Pelagem</label>
+                    <input type="text" id="furColor" placeholder="Cor da Pelagem" required />
+                </div>
+                <div class="form-group">
+                    <label for="condominium">Condomínio</label>
+                    <input type="text" id="condominium" placeholder="Condomínio" required />
+                </div>
+                <div class="form-group">
+                    <label for="block">Bloco</label>
+                    <input type="text" id="block" placeholder="Bloco" required />
+                </div>
+                <div class="form-group">
+                    <label for="apartment">Apartamento</label>
+                    <input type="text" id="apartment" placeholder="Apartamento" required />
+                </div>
+                <div class="form-group">
+                    <label for="ownerName">Nome do Tutor</label>
+                    <input type="text" id="ownerName" placeholder="Nome do Tutor" required />
+                </div>
+                <div class="form-group">
+                    <label for="neutered">Castrado?</label>
+                    <select id="neutered" required>
+                        <option value="true">Sim</option>
+                        <option value="false">Não</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Cadastrar Pet</button>
+            </form>
+        </section>
+
+        <section class="search-section">
+            <h2>Buscar Animais</h2>
+            <input type="text" id="searchInput" placeholder="Digite nome do animal, raça, tipo, tutor, condomínio, bloco ou apartamento" />
+            <button id="searchButton" class="btn">Pesquisar</button>
+            <button id="voiceSearchButton" class="btn">🔊</button> 
+        </section>
+
+        <section class="animals-list-section">
+            <h2>Lista de Animais Cadastrados no Condomínio</h2>
+            <ul id="animalsList" class="animals-list"></ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
